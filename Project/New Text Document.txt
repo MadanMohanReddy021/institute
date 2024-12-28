@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+  <style>
+ 
+    button{
+      background-color: rgba(59, 131, 133, 0.8)
+    }
+    button:hover
+    {
+      background-color: rgba(59, 74, 133, 0.8)
+    }
+  </style>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title></title>
+</head>
+<body><hr color="blue" />
+<a href="home.htm" target="hom"><button >Home</button>  
+
+<a href="application.html"target="hom"><button>Apply</button></a>
+<button>Update</button>
+<a href="result.htm" target="hom"><button>Result</button></a>
+<a href="login.htm" target="hom"><button>Login</button></a>
+<a href="help.htm"target="hom"><button>Help?</button></a>
+<a href="about.htm" target="hom"><button>About</button></a><br>
+<a href="payfee.htm"target="hom"><button >payfee</button></a><hr color="blue">
+</body>
+</html>

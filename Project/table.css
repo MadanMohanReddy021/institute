@@ -1,0 +1,53 @@
+   /* Ensure the table takes up full width */
+   table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style table headers */
+th {
+     
+    color: white; /* White text */
+    padding: 10px;
+    text-align: left;
+    background-color:rgba(0,0,0,0.5);
+}
+
+/* Style table cells */
+td {
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 10px;
+    text-align: left;
+}
+
+/* Alternate row colors for better readability */
+tbody tr:nth-child(even) {
+    background-color:rgba(0,0,0,0.5); /* Light gray */
+}
+
+/* Add hover effect for rows */
+tbody tr:hover {
+    background-color: #18131300; /* Darker gray */
+}
+
+/* Style for table borders and spacing */
+table, th, td {
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+/* Make sure the table headers are bold */
+th {
+    font-weight: bold;
+}
+
+/* Adjust the table width on smaller screens */
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jj.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      #cap{
+        color: red;
+        font-size:small;
+      }
+    </style>
+    <script> 
+    $(document).ready(function() {
+        $("form").submit(function(event) {
+            event.preventDefault(); // Prevent default form submission
+            var pass = $("#pass").val(); // Use .val() to get input value
+            var repass = $("#repass").val();
+            if (pass === repass) {
+                $("#app").off("submit").submit(); // Remove the event handler and submit
+            } else {
+                $("#cap").text("Please enter matching password");
+                $("#repass").focus();
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <form id="app" action="sin.php"method="post">
+        <fieldset>
+            <legend>Sign Up</legend>
+            <table>
+                <tr>
+                    <td colspan="2"><input type="number" placeholder="Hall Ticket No" name="HTNO" required></td>
+                </tr>
+                <tr>
+                   
+                    <td colspan="2"><input type="text" placeholder="Name" name="NAME" required></td>
+                </tr>
+                <TR>
+                    <td colspan="2"><input type="number" placeholder="Phone NO" name="PHNO"></td>
+                </TR>
+                <tr>
+                    
+                    <td colspan="2"><input type="password" placeholder="Password:" name="PASSWORD" id="pass" required></td>
+                </tr>
+                <tr>
+                    
+                    <td colspan="2"><input type="password" placeholder=" Re-enter Password" id="repass" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="cap"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Sign Up"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>

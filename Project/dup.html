@@ -1,0 +1,300 @@
+<html><head>
+<link rel="stylesheet" href="../styles.css"></link>
+<style>
+  /* Reset some default styles */
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+header {
+    background-color: #0044cc;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('college-campus.jpg'); /* Replace with your own image */
+    background-size: cover;
+    background-position: center;
+    height: 20%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* About Section */
+.about {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.about .vision-mission {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.about .vision-mission .vision,
+.about .vision-mission .mission {
+    width: 45%;
+}
+
+.about a {
+    color: #0044cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+/* Courses Section */
+.courses {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.course-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.course-item {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border-radius: 8px;
+}
+
+.course-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.course-item p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.course-item a {
+    color: #0044cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.course-item a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    background-color: #0044cc;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+}
+
+input[type="submit"] {
+    background-color: #0044cc;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    font-size: 1.1em;
+    border-radius: 4px;
+    width: auto;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0033aa;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #0044cc;
+    outline: none;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select {
+    font-size: 1em;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+input[type="radio"]:focus, input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 68, 204, 0.5);
+}
+
+select {
+    font-size: 1.1em;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+select:focus {
+    border-color: #0044cc;
+}
+
+</style>
+</head>
+ <body>
+  <div> </div>
+  <form action="login.php" method="post" id="app"><fieldset>
+    <legend >LOGIN</legend>
+
+   <table border="0">
+     <tr>
+       
+        <td colspan="2"> <input type="number"id="htno" placeholder="Hall Ticket NO." name="HTNO"width="250px"required></td>
+     </tr>
+     <tr>
+      <td></td><td></td>
+     </tr>
+     <tr>
+      <td></td><td></td>
+     </tr>
+     <tr>
+       
+       <td colspan="2"><input type="password" placeholder="Password:" id="pass"width="250px" NAME="PASSWORD"></td>
+     </tr><tr>
+      <td></td><td></td>
+     </tr><tr>
+      <td></td><td></td>
+     </tr>
+     <tr>
+       <td colspan="2"><input type="submit" ></td>
+     </tr>
+   </table>   <p id="ref">
+     <small ><p align="right"></p><a href="sinup.htm" >Don't have account?</a></small></p></small>
+   </p></fieldset>
+  </form>
+ </body>
+</html>
