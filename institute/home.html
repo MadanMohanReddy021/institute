@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loyola Polytechnic (YSRR) | Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Styling for Dropdown */
+        nav ul {
+            list-style-type: georgian;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            /* Flexbox for horizontal layout */
+        }
+
+        nav ul li {
+            position: relative;
+            display: flex;
+            /* Use flex layout for list items */
+            flex-direction: column;
+            /* Stack child items vertically */
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            color: black;
+        }
+
+        nav ul li a:hover {
+            background-color: #2d36bb;
+        }
+
+        /* Dropdown Menu */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #7b31d5;
+            min-width: 160px;
+            /* Adjusted width */
+            box-shadow: 0px 8px 16px rgba(18, 26, 182, 0.2);
+        }
+
+        nav ul li:hover>ul {
+            display: block;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+            background-color: #7b31d5;
+            color: black;
+        }
+
+        nav ul li ul li a:hover {
+            color: whitesmoke;
+        }
+
+        /* Button Styling */
+        button {
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #0f7be764;
+            /* Darker green on hover */
+            transform: scale(1.06);
+        }
+
+        button:active {
+            background-color: #3e8e41;
+            /* Even darker green when clicked */
+        }
+
+        button:focus {
+            outline: none;
+            /* Remove focus outline */
+        }
+
+        a {
+            text-decoration: none;
+            /* Remove link underline */
+        }
+
+        a:hover {
+            text-decoration: none;
+            /* Keep no underline on hover */
+        }
+
+        /* For Tablet and Small Screens (max-width: 768px) */
+        @media (max-width: 768px) {
+            nav ul {
+                display: grid;
+                /* Switch to grid layout */
+                grid-template-columns: repeat(2, 1fr);
+                /* Create two columns for the menu items */
+                gap: 10px;
+                /* Add space between items */
+                width: 100%;
+                padding: 10px;
+            }
+
+            nav ul li {
+                display: block;
+                /* Each menu item should be block in the grid */
+                margin-right: 0;
+                text-align: center;
+            }
+
+            nav ul li a {
+                padding: 12px 20px;
+                /* Increase padding for better touchability */
+            }
+
+            /* Adjust dropdown behavior for smaller screens */
+            nav ul li ul {
+                position: static;
+                width: 100%;
+                /* Dropdown takes full width */
+                box-shadow: none;
+                display: block;
+                /* Always visible on mobile screens */
+            }
+
+            nav ul li a:focus+ul,
+            nav ul li ul:hover {
+                display: block;
+                /* Show dropdown when menu item is focused or hovered */
+            }
+
+            /* Optional: Adjust dropdown items to look like table rows */
+            nav ul li ul li a {
+                padding: 12px 20px;
+                background-color: #7b31d5;
+                color: black;
+                text-align: left;
+                /* Align text to left for readability */
+            }
+
+            nav ul li ul li a:hover {
+                background-color: #1f0c48;
+                color: whitesmoke;
+            }
+        }
+
+        /* For Mobile Screens and Below (max-width: 480px) */
+        @media (max-width: 480px) {
+            nav ul {
+                text-align: left;
+                /* Align items to the left for readability */
+                padding: 0;
+            }
+
+            nav ul li {
+                width: 100%;
+                /* Each item takes full width */
+                display: block;
+            }
+
+            /* Ensure dropdown takes full width */
+            nav ul li ul {
+                position: static;
+                width: 100%;
+            }
+
+            nav ul li ul li a:hover {
+                background-color: #1f0c48;
+                color: whitesmoke;
+            }
+        }
+
+        /* For Larger Screens (min-width: 1024px) */
+        @media (min-width: 1024px) {
+            nav ul li {
+                display: inline-block;
+                /* Keep menu items inline on larger screens */
+                margin-right: 20px;
+            }
+
+            nav ul li a {
+                padding: 10px 15px;
+            }
+
+            nav ul li ul {
+                position: absolute;
+                min-width: 160px;
+                /* Fixed dropdown width */
+            }
+
+            nav ul li:hover>ul {
+                display: block;
+            }
+
+            nav ul li ul li a {
+                padding: 10px;
+                background-color: #7b31d5;
+                color: black;
+            }
+
+            nav ul li ul li a:hover {
+                background-color: #1f0c48;
+                color: whitesmoke;
+            }
+        }
+
+        /* Notification Section */
+        .notification {
+            background-color: #ffcc00;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="loy.jpg" alt="Loyola Polytechnic (YSRR) Logo">
+            <p>Loyola Polytechnic (YSRR)</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
+                <li><a href="#">Admissions</a>
+                    <ul>
+                        <li><a href="project/login.php">Student Login</a></li>
+                        <li><a href="project/payment.php">Pay Application Fee</a></li>
+                        <li><a href="Project/appli.php">Fill Application</a></li>
+                        <li><a href="results.php">Check Result</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Marks</a></li>
+                <li><a href="#">Facilities</a></li>
+                <li><a href="Admin.php">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Notification Area -->
+    <div class="notification">
+        <p>Latest Updates: Applications for the upcoming academic year are now open! Apply now.</p>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Loyola Polytechnic (YSRR)</h1>
+            <p>A Jesuit Institute</p>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>History Of Our College</h2>
+        <p>This college was founded by Sri. Y.S. Raja Reddy Educational Trust in 1979 and was affiliated to Sri Venkateswara University. Late Chief Minister of Andhra Pradesh Sri. Y. S. Raja Sekhara Reddy (Alumni of Andhra Loyola College, Vijayawada) approached Loyola (Jesuit) Fathers in 1993 to take over the institution. From 1993 to 1998, the college was administered by the Jesuits on an experimental basis. Then they decided to take over the institution.</p>
+        <div class="vision-mission">
+            <div class="vision">
+                <h3>Our Vision</h3>
+                <p>To produce World class Engineers for converting global challenges into opportunities through, "Value Embedded Quality Technical Education", and to develop this College as an Academy of Higher Learning in the field of Engineering & Technology.</p>
+            </div>
+
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <p>To impart Technical education and training to the poor and most backward students of Rayalaseema to develop their holistic Personality and to prepare them for work and life, equipping them to be life-long learners and to contribute to the technological, economic and social development of India.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses">
+        <h2>Our Programs</h2>
+        <div class="course-list">
+            <div class="course-item">
+                <h3>Diploma Courses</h3>
+                <ol>
+                    <li><a href="link-to-computer-engg.html"><button>Diploma in Computer Engg.</button></a></li>
+                    <li><a href="link-to-electronics-comm-engg.html"><button>Diploma in Electronics and Communications Engg.</button></a></li>
+                    <li><a href="link-to-electrical-electronics-engg.html"><button>Diploma in Electrical and Electronics Engg.</button></a></li>
+                    <li><a href="link-to-civil-engg.html"><button>Diploma in Civil Engg.</button></a></li>
+                    <li><a href="link-to-mechanical-engg.html"><button>Diploma in Mechanical Engg.</button></a></li>
+                    <li><a href="link-to-mining-engg.html"><button>Diploma in Mining Engg.</button></a></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Loyola Polytechnic (YSRR). All rights reserved.</p>
+        <p>Bakarapuram, Pulivendula, YSR(Dist), Andhra Pradesh, 516300 | Phone: 08568-286309 | Email: loyolapoly.pulivendla@gmail.com</p>
+        <div class="social-media">
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+
+</html>

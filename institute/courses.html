@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Courses - Loyola Polytechnic</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Styling for Courses */
+        .course-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .course-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+        }
+
+        .course-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .course-item h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .course-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .course-item button {
+            padding: 10px 20px;
+            background-color: #7b31d5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .course-item button:hover {
+            background-color: #4a1f87;
+        }
+
+        @media (max-width: 768px) {
+            .course-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="logo">
+            <img src="loy.jpg" alt="Loyola Polytechnic (YSRR) Logo">
+            <p>Loyola Polytechnic (YSRR)</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="courses.php">Courses</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Marks</a></li>
+                <li><a href="#">Facilities</a></li>
+                <li><a href="Admin.php">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Courses Section -->
+    <section class="courses">
+        <h2>Our Programs</h2>
+        <div class="course-container">
+            <!-- Course 1: Diploma in Computer Engineering -->
+            <div class="course-item">
+                <img src="images/computer-engg.jpg" alt="Diploma in Computer Engineering">
+                <h3>Diploma in Computer Engineering</h3>
+                <p>This course provides the students with the skills and knowledge required to work with computer systems, programming, networking, and information technology.</p>
+                <a href="link-to-computer-engg.html"><button>Learn More</button></a>
+            </div>
+
+            <!-- Course 2: Diploma in Electronics and Communications Engineering -->
+            <div class="course-item">
+                <img src="images/electronics-comm-engg.jpg" alt="Diploma in Electronics and Communications Engineering">
+                <h3>Diploma in Electronics and Communications Engineering</h3>
+                <p>This program focuses on the design, development, and application of electronic systems and communication technologies.</p>
+                <a href="link-to-electronics-comm-engg.html"><button>Learn More</button></a>
+            </div>
+
+            <!-- Course 3: Diploma in Electrical and Electronics Engineering -->
+            <div class="course-item">
+                <img src="images/electrical-electronics-engg.jpg" alt="Diploma in Electrical and Electronics Engineering">
+                <h3>Diploma in Electrical and Electronics Engineering</h3>
+                <p>The course includes the study of electrical circuits, electronic devices, and power systems to equip students with fundamental electrical engineering skills.</p>
+                <a href="link-to-electrical-electronics-engg.html"><button>Learn More</button></a>
+            </div>
+
+            <!-- Course 4: Diploma in Civil Engineering -->
+            <div class="course-item">
+                <img src="images/civil-engg.jpg" alt="Diploma in Civil Engineering">
+                <h3>Diploma in Civil Engineering</h3>
+                <p>This course covers the design, construction, and maintenance of infrastructure, such as bridges, roads, buildings, and water systems.</p>
+                <a href="link-to-civil-engg.html"><button>Learn More</button></a>
+            </div>
+
+            <!-- Course 5: Diploma in Mechanical Engineering -->
+            <div class="course-item">
+                <img src="images/mechanical-engg.jpg" alt="Diploma in Mechanical Engineering">
+                <h3>Diploma in Mechanical Engineering</h3>
+                <p>The course provides knowledge in mechanics, thermodynamics, material science, and the design and production of mechanical systems.</p>
+                <a href="link-to-mechanical-engg.html"><button>Learn More</button></a>
+            </div>
+
+            <!-- Course 6: Diploma in Mining Engineering -->
+            <div class="course-item">
+                <img src="images/mining-engg.jpg" alt="Diploma in Mining Engineering">
+                <h3>Diploma in Mining Engineering</h3>
+                <p>This program focuses on the extraction of minerals from the Earth, the planning and operation of mines, and the development of mining techniques.</p>
+                <a href="link-to-mining-engg.html"><button>Learn More</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Loyola Polytechnic (YSRR). All rights reserved.</p>
+        <p>Bakarapuram, Pulivendula, YSR(Dist), Andhra Pradesh, 516300 | Phone: 08568-286309 | Email: loyolapoly.pulivendla@gmail.com</p>
+        <div class="social-media">
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
